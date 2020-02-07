@@ -9,13 +9,13 @@ print(banner)
 print("")
 print("Hello player! I hope you're ready to start your adventure.")
 
-def askName():
+def title():
     answer = input("To enter Story Mode, type 'New Game. ")
     if answer == "New Game":
         print("< Entering Story Mode >")
     else:
         print("< Error: Wrong Command. Try again. >")
-        askName()
+        title()
 
 def intro():
     print("")
@@ -107,6 +107,7 @@ def firstnight():
 
 def meetingNaomi():
     print("< After a long first night, you here a loud crash in the main room. >")
+    print("")
     input("< You and Asher walk out and find one of the walls with a hole in it. \n   Along with Layla and some other girl who is dressed in battle armour. >")
     input("Layla: What have I told you about letting your anger getting the best of you?")
     input("???: I can't help it Layla! \n The Nankan army isn't even playing fair at this point, and we have no way of knowing their plans.")
@@ -143,21 +144,52 @@ def training():
     print("< All three of you walk into town into what seems to be an obstacle course. >")
     input("Naomi: Alright kid, let's see what you got.")
     input("Asher: To activate your powers, just try and focus on the energy coming from your charm.")
-    power = input("What were the colors of your charm? \n A) Bright Blue and White B) Bright Red and Orange")
+    power = input("What were the colors of your charm? \n A) Bright Blue and White B) Bright Red and Orange. ")
     if power == "A":
         print("< You feel a cold energy charge through you. \n You then realize your hands contain a blue flame with ice pieces. >")
+        input("Naomi: Not bad kid, not bad.")
+        input("Naomi: Try shooting those targets.")
+        shoot = input("< You raise your arms up and shoot A) The Targets or B) The Barrels. ")
+        if shoot == "A":
+            print("Asher: Hey you did it!")
+            input("Naomi: Let's take you to your first mini boss.")
+        else:
+            print("Naomi: Um kid... that's the wrong target. Try again.")
+            training()
     else:
         print("< Nothing seems to happen. Try again. >")
         training()
 
 def trainTwo():
-    print("Hello")
+    name = input("TYPE NAME FOR SAVE FILE ")
+    print("")
+    print("< You walk into a cave with Naomi and Asher >")
+    input("Asher: Okay " + name +", in this cave, there are these little creaters called Nan Goblins.")
+    input("Naomi: The little things are annoying and a bit challenging but they are the easiest to start with.")
+    input("Asher: We'll be watching from that ledge, so if you need help don't worry we're not far")
+    print("")
+    print("< You walk deeper into the cave and here a noise not far up ahead. >")
+    input("< Walking towards the noise, you see two Nan Goblins sitting on the floor of the cave. >")
+    shot = input("Do you A) Shoot at cave ceiling or B) Shoot at the Goblin? ")
+    if shot == 'A':
+        input("< You shoot the ceiling causing rock to fall onto both of the goblins. >")
+        print("Asher: Way to go " + name + "! Some others will be coming so stay alert.")
+    else:
+        print("< You shoot at the Goblin and only manage to kill one of them. >")
+        print(" < You get injured. Try again. >")
+        trainTwo()
+    print("")
+    input("< Shortly after Asher stops talking, you here what seems to be four more gobling coming towards you. >")
+    power = input("Do you A) Turn invisible, B) Use an icy force field, or C) Shoot an ice beam? ")
+    if power == 'A':
+        print("< You turn invisible causing the goblins to run right past you. >")
+    if power == 'B':
+        print("< You use and Icy Force Field. >")
+        input("< When the goblin jump to attack you, they run straight into the icicles. >")
+    else:
+        print("< You shoot an ice bean towards the goblins and manage to hit two of them. >")
+        input("< The other two managed to dodge the attack and attack you. >")
+        print(" < You get injured. Try again. >")
+        trainTwo()
 
-
-
-askName()
-intro()
-firstnight()
-meetingNaomi()
-training()
 trainTwo()
