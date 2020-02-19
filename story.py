@@ -322,3 +322,14 @@ def finaleone():
     input("Naomi: I thought so too, but he broke free somehow.")
     print("")
     print("< You see a boy with piercing grey eyes, eyes that seem to be glowing, emerge from the Nankan army")
+    input("< Everyone has gone silent now >")
+    print("")
+    input("Tristan: Well well well... if it isn't the Asunder army.")
+    input("Tristan: And of course my dear friends Naomi and Asher.")
+    input("Naomi: How the hell did you get out?")
+    print("< Asher looks at you and pauses. >")
+    print("")
+    input("")
+
+
+finaleone()
