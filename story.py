@@ -327,9 +327,9 @@ def finaleone():
     input("Tristan: Well well well... if it isn't the Asunder army.")
     input("Tristan: And of course my dear friends Naomi and Asher.")
     input("Naomi: How the hell did you get out?")
-    print("< Asher looks at you and pauses. >")
+    input("Tristan: ")
+    print("< Tristan looks at you and pauses. >")
     print("")
-    input("")
 
 
 finaleone()
